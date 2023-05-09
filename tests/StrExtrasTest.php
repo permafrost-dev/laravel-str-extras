@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-use function \PHPUnit\Framework\assertSame;
+use function PHPUnit\Framework\assertSame;
 
 test('can insert strings', function () {
     $initial = 'HelloWorld';
