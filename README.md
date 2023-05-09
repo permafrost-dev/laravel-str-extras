@@ -1,4 +1,4 @@
-# Extra helper methods for the Laravel Str helper class.
+# Extra methods for the Laravel Str suport class.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/permafrost-dev/laravel-str-extras.svg?style=flat-square)](https://packagist.org/packages/permafrost-dev/laravel-str-extras)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/permafrost-dev/laravel-str-extras/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/permafrost-dev/laravel-str-extras/actions?query=workflow%3Arun-tests+branch%3Amain)
