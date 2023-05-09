@@ -39,37 +39,10 @@ You can install the package via composer:
 composer require permafrost-dev/laravel-str-extras
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-str-extras-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-str-extras-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-str-extras-views"
-```
-
 ## Usage
 
 ```php
-$laravelStrExtras = new permafrost-dev\LaravelStrExtras();
-echo $laravelStrExtras->echoPhrase('Hello, permafrost-dev!');
+$new = Str::insert('HelloWorld', '--', 5); //returns 'Hello--World'
 ```
 
 ## Testing
