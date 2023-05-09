@@ -5,7 +5,31 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/permafrost-dev/laravel-str-extras/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/permafrost-dev/laravel-str-extras/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/permafrost-dev/laravel-str-extras.svg?style=flat-square)](https://packagist.org/packages/permafrost-dev/laravel-str-extras)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Extra helper methods for the Laravel Str helper class.
+
+### Additional Methods
+
+- `insert()` - inserts a string at the specified position in the given string.
+- `insertAfterMatch()` - inserts a string after the specified pattern match.
+- `insertAfter()` - inserts a string after the specified substring.
+
+### Examples
+
+```php
+$new = Str::insert('HelloWorld', '--', 5); //returns 'Hello--World'
+$new = Str::insertAfterMatch('HelloWorld', '/(Hello)/', ' '); // returns 'Hello World'
+$new = Str::insertAfter('HelloWorld', 'H', '_'); // returns 'H_elloWorld'
+```
+As far as making building web applications easier - consider the following use case:
+
+```php
+// the identifier in the database is UA-1001, but we want to
+// allow the user to provide the identifier without a dash for ease of entry:
+
+$providedIdentifier = 'UA1001';
+$actualIdentifier = Str::insertAfter($providedIdentifier, 'UA', '-'); 
+$userExists = User::where('identifier', $actualIdentifier)->exists();
+```
 
 ## Installation
 
