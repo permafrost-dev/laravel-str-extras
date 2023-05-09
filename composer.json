@@ -1,17 +1,19 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "permafrost-dev/laravel-str-extras",
+    "description": "Extra helper methods for the Laravel Str helper class.",
     "keywords": [
-        ":vendor_name",
+        "permafrost-dev",
         "laravel",
-        ":package_slug"
+        "laravel-str-extras",
+        "strings",
+        "helper-functions"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/permafrost-dev/laravel-str-extras",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Patrick Organ",
+            "email": "patrick@permafrost.dev",
             "role": "Developer"
         }
     ],
@@ -30,18 +32,16 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "PermafrostDev\\LaravelStrExtras\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "PermafrostDev\\LaravelStrExtras\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "PermafrostDev\\LaravelStrExtras\\LaravelStrExtrasServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelStrExtras": "PermafrostDev\\LaravelStrExtras\\Facades\\LaravelStrExtras"
             }
         }
     },
