@@ -20,8 +20,6 @@ class LaravelStrExtrasServiceProvider extends PackageServiceProvider
 
     public function boot()
     {
-        Str::macro('insert', fn (...$args) => (new LaravelStrExtras())->insert(...$args));
-        Str::macro('insertAfter', fn (...$args) => (new LaravelStrExtras())->insertAfter(...$args));
-        Str::macro('insertAfterMatch', fn (...$args) => (new LaravelStrExtras())->insertAfterMatch(...$args));
+        Str::mixin(new LaravelStrExtras());
     }
 }
